@@ -1,2 +1,15 @@
-# klay-batch-transfer
-Klay batch transfer based on smart contract.
+# klaytn-0.5.6-Boilerplate
+Klaytn smart contract development environment boiler plate
+
+## Environment
+* solc 0.5.6
+* Constantinople EVM
+* vscode
+
+## compile&test
+```
+npx hardhat compile
+npx hardhat test
+```
+
+
