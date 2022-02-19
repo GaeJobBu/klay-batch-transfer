@@ -1,5 +1,6 @@
 pragma solidity ^0.5.6;
 import "./klaytn-contracts/math/SafeMath.sol";
+//import "hardhat/console.sol";
 
 contract KlayBatchTransfer{
     using SafeMath for uint256;
@@ -13,7 +14,9 @@ contract KlayBatchTransfer{
 
         //tx에 포함된 klay와 총 전송 잔고가 일치하는지 확인.
         for (i; i < _valueList.length; i ++) {
-            totalValue.add(_valueList[i]);
+            totalValue = totalValue.add(_valueList[i]);
+            //console.log("valueList[%d] = %d", i, _valueList[i]);
+            //console.log("totalValue = %d", totalValue);
         }
         require(msg.value == totalValue, "Incorrect transfer amount");
 

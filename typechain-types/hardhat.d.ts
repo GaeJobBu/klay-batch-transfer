@@ -17,10 +17,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.KlayBatchTransfer__factory>;
     getContractFactory(
-      name: "KlayBatchTrasnfer",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.KlayBatchTrasnfer__factory>;
-    getContractFactory(
       name: "MinterRole",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.MinterRole__factory>;
@@ -294,11 +290,6 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.KlayBatchTransfer>;
-    getContractAt(
-      name: "KlayBatchTrasnfer",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.KlayBatchTrasnfer>;
     getContractAt(
       name: "MinterRole",
       address: string,

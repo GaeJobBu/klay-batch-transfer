@@ -2,7 +2,6 @@
 /* tslint:disable */
 /* eslint-disable */
 export type { KlayBatchTransfer } from "./KlayBatchTransfer";
-export type { KlayBatchTrasnfer } from "./KlayBatchTrasnfer";
 export type { MinterRole } from "./MinterRole";
 export type { PauserRole } from "./PauserRole";
 export type { Context } from "./Context";
@@ -72,7 +71,6 @@ export type { KIP7Token } from "./KIP7Token";
 export type { KIP7TokenFull } from "./KIP7TokenFull";
 
 export { KlayBatchTransfer__factory } from "./factories/KlayBatchTransfer__factory";
-export { KlayBatchTrasnfer__factory } from "./factories/KlayBatchTrasnfer__factory";
 export { MinterRole__factory } from "./factories/MinterRole__factory";
 export { PauserRole__factory } from "./factories/PauserRole__factory";
 export { Context__factory } from "./factories/Context__factory";
