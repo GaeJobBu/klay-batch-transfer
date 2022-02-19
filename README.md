@@ -1,5 +1,5 @@
-# klaytn-0.5.6-Boilerplate
-Klaytn smart contract development environment boiler plate
+# klay-batch-transfer
+Klay batch transfer based on smart contract.
 
 ## Environment
 * solc 0.5.6
