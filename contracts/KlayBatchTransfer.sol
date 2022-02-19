@@ -1,11 +1,11 @@
 pragma solidity ^0.5.6;
 import "./klaytn-contracts/math/SafeMath.sol";
 
-contract KlayBatchTrasnfer{
+contract KlayBatchTransfer{
     using SafeMath for uint256;
 
     //tolist에게 valueList만큼의 Klay를 전송한다.
-    function klayBatchTransfer(address payable[] calldata _toList, uint256[] calldata _valueList) external payable {
+    function batchTransfer(address payable[] calldata _toList, uint256[] calldata _valueList) external payable {
         require(_toList.length == _valueList.length, "Array length is different");
 
         uint256 i = 0;

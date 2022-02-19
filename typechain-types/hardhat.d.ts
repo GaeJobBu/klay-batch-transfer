@@ -13,6 +13,14 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
+      name: "KlayBatchTransfer",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.KlayBatchTransfer__factory>;
+    getContractFactory(
+      name: "KlayBatchTrasnfer",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.KlayBatchTrasnfer__factory>;
+    getContractFactory(
       name: "MinterRole",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.MinterRole__factory>;
@@ -280,11 +288,17 @@ declare module "hardhat/types/runtime" {
       name: "KIP7TokenFull",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.KIP7TokenFull__factory>;
-    getContractFactory(
-      name: "SampleNFT",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.SampleNFT__factory>;
 
+    getContractAt(
+      name: "KlayBatchTransfer",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.KlayBatchTransfer>;
+    getContractAt(
+      name: "KlayBatchTrasnfer",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.KlayBatchTrasnfer>;
     getContractAt(
       name: "MinterRole",
       address: string,
@@ -620,11 +634,6 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.KIP7TokenFull>;
-    getContractAt(
-      name: "SampleNFT",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.SampleNFT>;
 
     // default types
     getContractFactory(

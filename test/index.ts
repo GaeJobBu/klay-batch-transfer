@@ -1,15 +1,25 @@
 import { expect } from "chai";
 import { ethers, waffle } from "hardhat";
 
-describe("Contract", function () {
-  it("Deploy, Mint, Batch", async function () {
+describe("KlayBatchTransfer", function () {
+  it("Deploy and Transfer", async function () {
     const provider = waffle.provider;
     //const [minter] = await ethers.getSigners();
-    const [minter, user] = provider.getWallets();
-    const ipfsEndpoint = "https://mock-endpoint/metadata/"
-    const NFT = await ethers.getContractFactory("SampleNFT");
-    const nft = await NFT.deploy();
-    await nft.deployed();
+    const [minter, to1, to2, to3, to4, to5] = provider.getWallets();
+    const Contract = await ethers.getContractFactory("KlayBatchTransfer");
+    const contract = await Contract.deploy();
+    await contract.deployed();
+
+    console.log("minter:" + await provider.getBalance(minter.address))
+    console.log("to1:" + await provider.getBalance(to1.address))
+    console.log("to2:" + await provider.getBalance(to2.address))
+
+/*
+    await expect(() => minter.sendTransaction({to: minter.address, value: 200 ethers.}))
+      .to.changeEtherBalance(walletTo, 200);
+
+await expect(await wallet.sendTransaction({to: walletTo.address, value: 200}))
+  .to.changeEtherBalance(walletTo, 200);
 
     //set ipfs endpoint
     await nft.setVariableBaseUri(0, ipfsEndpoint);
@@ -59,7 +69,7 @@ describe("Contract", function () {
     const baseUriTx = await nft.setVariableBaseUri(1, "https://google.com/");
     await baseUriTx.wait();
     expect(await nft.tokenURI(99)).to.be.equal("https://google.com/" + "99");
-    expect(await nft.tokenURI(98)).to.be.equal(ipfsEndpoint + "98");
+    expect(await nft.tokenURI(98)).to.be.equal(ipfsEndpoint + "98");*/
 
   });
 });
