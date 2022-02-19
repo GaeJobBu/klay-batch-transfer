@@ -8,6 +8,7 @@ Klaytn smart contract development environment boiler plate
 
 ## compile&test
 ```
+npm i
 npx hardhat compile
 npx hardhat test
 ```
